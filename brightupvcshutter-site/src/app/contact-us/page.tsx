@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/sections/ContactForm";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { PageHero } from "@/components/sections/PageHero";
 import { PhoneLinks } from "@/components/ui/PhoneLink";
-import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
+import { breadcrumbSchema, contactPageSchema, contactPointSchema, faqSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = pageMetadata({
@@ -27,13 +27,15 @@ export default function ContactPage() {
     <>
       <JsonLd
         data={[
-          webPageSchema({
+          contactPageSchema({
             title: "تواصل معنا",
-            description: "صفحة التواصل مع برايت شتر",
+            description:
+              "تواصل مع برايت شتر لطلب عرض سعر أو استفسار عن الرولنج شاتر ونوافذ UPVC والألومنيوم في مصر.",
             path: "/contact-us/",
           }),
           breadcrumbSchema(breadcrumbs),
-          faqSchema(CONTACT_FAQS),
+          faqSchema(CONTACT_FAQS, { path: "/contact-us/" }),
+          contactPointSchema(),
         ]}
       />
 

@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { SITE } from "@/lib/site";
-import { organizationSchema, websiteSchema } from "@/lib/schema";
+import { contactPointSchema, localBusinessSchema, websiteSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 const cairo = Cairo({
@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" className={`${cairo.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-white text-slate-900">
-        <JsonLd data={[organizationSchema(), websiteSchema()]} />
+        <JsonLd data={[localBusinessSchema(), contactPointSchema(), websiteSchema()]} />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

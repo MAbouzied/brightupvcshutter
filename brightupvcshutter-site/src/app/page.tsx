@@ -23,7 +23,15 @@ export default function HomePage() {
   return (
     <>
       <JsonLd
-        data={[webPageSchema({ title: SITE.name, description: SITE.description, path: "/" }), faqSchema(HOME.faqs)]}
+        data={[
+          webPageSchema({
+            title: SITE.name,
+            description: SITE.description,
+            path: "/",
+            mainEntityId: `${SITE.url}/#faq`,
+          }),
+          faqSchema(HOME.faqs, { path: "/" }),
+        ]}
       />
 
       <section className="relative overflow-hidden bg-slate-950 text-white">

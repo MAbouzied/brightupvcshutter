@@ -2,11 +2,31 @@ import { SITE } from "./site";
 
 type FAQ = { question: string; answer: string };
 
-export function organizationSchema() {
+export const SCHEMA_IDS = {
+  localBusiness: `${SITE.url}/#localbusiness`,
+  contactPoint: `${SITE.url}/#contactpoint`,
+  website: `${SITE.url}/#website`,
+} as const;
+
+export function contactPointSchema() {
   return {
-    "@context": "https://schema.org",
+    "@type": "ContactPoint",
+    "@id": SCHEMA_IDS.contactPoint,
+    contactType: "customer service",
+    telephone: SITE.phones.map((phone) => phone.tel),
+    email: SITE.email,
+    areaServed: {
+      "@type": "Country",
+      name: "Egypt",
+    },
+    availableLanguage: SITE.language,
+  };
+}
+
+export function localBusinessSchema() {
+  return {
     "@type": "LocalBusiness",
-    "@id": `${SITE.url}/#organization`,
+    "@id": SCHEMA_IDS.localBusiness,
     name: SITE.name,
     alternateName: SITE.legalName,
     description: SITE.description,
@@ -22,6 +42,7 @@ export function organizationSchema() {
       addressRegion: SITE.address.region,
       addressCountry: SITE.address.countryCode,
     },
+    contactPoint: { "@id": SCHEMA_IDS.contactPoint },
     areaServed: {
       "@type": "Country",
       name: "Egypt",
@@ -30,15 +51,19 @@ export function organizationSchema() {
   };
 }
 
+/** @deprecated Use localBusinessSchema — kept for layout import compatibility */
+export function organizationSchema() {
+  return localBusinessSchema();
+}
+
 export function websiteSchema() {
   return {
-    "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": `${SITE.url}/#website`,
+    "@id": SCHEMA_IDS.website,
     url: SITE.url,
     name: SITE.name,
     description: SITE.description,
-    publisher: { "@id": `${SITE.url}/#organization` },
+    publisher: { "@id": SCHEMA_IDS.localBusiness },
     inLanguage: SITE.language,
   };
 }
@@ -48,29 +73,58 @@ export function webPageSchema({
   description,
   path,
   type = "WebPage",
+  mainEntityId,
 }: {
   title: string;
   description: string;
   path: string;
-  type?: "WebPage" | "AboutPage" | "ContactPage";
+  type?: "WebPage" | "AboutPage";
+  mainEntityId?: string;
 }) {
   const url = `${SITE.url}${path}`;
-  return {
-    "@context": "https://schema.org",
+  const schema: Record<string, unknown> = {
     "@type": type,
     "@id": `${url}#webpage`,
     url,
     name: title,
     description,
-    isPartOf: { "@id": `${SITE.url}/#website` },
-    about: { "@id": `${SITE.url}/#organization` },
+    isPartOf: { "@id": SCHEMA_IDS.website },
+    about: { "@id": SCHEMA_IDS.localBusiness },
+    inLanguage: SITE.language,
+  };
+
+  if (mainEntityId) {
+    schema.mainEntity = { "@id": mainEntityId };
+  }
+
+  return schema;
+}
+
+export function contactPageSchema({
+  title,
+  description,
+  path,
+}: {
+  title: string;
+  description: string;
+  path: string;
+}) {
+  const url = `${SITE.url}${path}`;
+  return {
+    "@type": "ContactPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: title,
+    description,
+    isPartOf: { "@id": SCHEMA_IDS.website },
+    about: { "@id": SCHEMA_IDS.localBusiness },
+    mainEntity: { "@id": SCHEMA_IDS.localBusiness },
     inLanguage: SITE.language,
   };
 }
 
 export function breadcrumbSchema(items: { name: string; path: string }[]) {
   return {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: items.map((item, index) => ({
       "@type": "ListItem",
@@ -93,13 +147,12 @@ export function serviceSchema({
   image: string;
 }) {
   return {
-    "@context": "https://schema.org",
     "@type": "Service",
     name,
     description,
     url: `${SITE.url}${path}`,
     image: `${SITE.url}${image}`,
-    provider: { "@id": `${SITE.url}/#organization` },
+    provider: { "@id": SCHEMA_IDS.localBusiness },
     areaServed: {
       "@type": "Country",
       name: "Egypt",
@@ -107,9 +160,8 @@ export function serviceSchema({
   };
 }
 
-export function faqSchema(faqs: readonly FAQ[]) {
-  return {
-    "@context": "https://schema.org",
+export function faqSchema(faqs: readonly FAQ[], options?: { path: string }) {
+  const schema: Record<string, unknown> = {
     "@type": "FAQPage",
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
@@ -120,6 +172,14 @@ export function faqSchema(faqs: readonly FAQ[]) {
       },
     })),
   };
+
+  if (options?.path) {
+    const url = `${SITE.url}${options.path}`;
+    schema["@id"] = `${url}#faq`;
+    schema.url = url;
+  }
+
+  return schema;
 }
 
 export function imageObjectSchema({
@@ -132,7 +192,6 @@ export function imageObjectSchema({
   path: string;
 }) {
   return {
-    "@context": "https://schema.org",
     "@type": "ImageObject",
     name,
     description,
