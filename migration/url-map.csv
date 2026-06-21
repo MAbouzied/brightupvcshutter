@@ -1,0 +1,20 @@
+old_url,new_url,status,notes
+https://brightupvcshutter.com/,/,built,Home
+https://brightupvcshutter.com/our-services/,/our-services/,built,Services hub (WP 4125)
+https://brightupvcshutter.com/shutter/,/shutter/,built,Rolling shutter (WP 4144)
+https://brightupvcshutter.com/mesh-shutters/,/mesh-shutters/,built,Mesh shutters (WP 4218 — was slug conflict)
+https://brightupvcshutter.com/smart-shutter/,/smart-shutter/,built,Smart shutter (WP 4270)
+https://brightupvcshutter.com/upvc-windows/,/upvc-windows/,built,UPVC windows (WP 4157/4234)
+https://brightupvcshutter.com/upvc-windows-and-doors/,/upvc-windows/,redirect,301 via .htaccess / _redirects
+https://brightupvcshutter.com/aluminum-windows-and-doors/,/aluminum-windows-and-doors/,built,Aluminum (WP 4856)
+https://brightupvcshutter.com/shower-cabins/,/shower-cabins/,built,Shower cabins (WP 4285/4171)
+https://brightupvcshutter.com/handrail/,/handrail/,built,Handrail (WP 4290/4180)
+https://brightupvcshutter.com/contact-us/,/contact-us/,built,Contact (WP 32)
+https://brightupvcshutter.com/our-projects/,/our-projects/,built,Projects (WP 4137)
+https://brightupvcshutter.com/about-us/,/about-us/,built,About (WP 682)
+https://brightupvcshutter.com/%d8%ae%d8%af%d9%85%d8%a7%d8%aa%d9%86%d8%a7/,/our-services/,redirect,Arabic services slug
+https://brightupvcshutter.com/%d9%85%d8%b4%d8%a7%d8%b1%d9%8a%d8%b9%d9%86%d8%a7/,/our-projects/,redirect,Arabic projects slug
+https://brightupvcshutter.com/%d8%aa%d9%88%d8%a7%d8%b5%d9%84-%d9%85%d8%b9%d9%86%d8%a7/,/contact-us/,redirect,Arabic contact slug
+https://brightupvcshutter.com/%d9%85%d9%86-%d9%86%d8%ad%d9%86/,/about-us/,redirect,Arabic about slug
+https://brightupvcshutter.com/wp-content/uploads/,—,removed,No wp-content in new site
+https://brightupvcshutter.com/wp-admin/,/,redirect,Blocked legacy admin

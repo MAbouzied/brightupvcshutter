@@ -1,0 +1,33 @@
+# Apache redirects for legacy WordPress URLs → static Next.js export
+# Enable mod_rewrite on the host
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Trailing slash normalization (optional — site uses trailing slashes)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ /$1/ [L,R=301]
+
+# Legacy service URL aliases
+RedirectMatch 301 ^/upvc-windows-and-doors/?$ /upvc-windows/
+RedirectMatch 301 ^/upvc-windows-and-doors/(.*)$ /upvc-windows/$1
+
+# Old WP page 4218 used slug "shutter" for mesh content — route to mesh-shutters
+# (rolling shutter remains at /shutter/ from home menu)
+RedirectMatch 301 ^/mesh-shutter/?$ /mesh-shutters/
+RedirectMatch 301 ^/mesh-shutter/(.*)$ /mesh-shutters/$1
+
+# Common WP paths — send to homepage or relevant page
+RedirectMatch 301 ^/wp-admin/?(.*)$ /
+RedirectMatch 301 ^/wp-login\.php$ /
+RedirectMatch 301 ^/wp-content/?(.*)$ /
+RedirectMatch 301 ^/feed/?$ /
+RedirectMatch 301 ^/comments/feed/?$ /
+
+# Arabic slug variants (URL-encoded) from old menu if indexed
+RedirectMatch 301 ^/%d8%ae%d8%af%d9%85%d8%a7%d8%aa%d9%86%d8%a7/?$ /our-services/
+RedirectMatch 301 ^/%d9%85%d8%b4%d8%a7%d8%b1%d9%8a%d8%b9%d9%86%d8%a7/?$ /our-projects/
+RedirectMatch 301 ^/%d8%aa%d9%88%d8%a7%d8%b5%d9%84-%d9%85%d8%b9%d9%86%d8%a7/?$ /contact-us/
+RedirectMatch 301 ^/%d9%85%d9%86-%d9%86%d8%ad%d9%86/?$ /about-us/
+</IfModule>
