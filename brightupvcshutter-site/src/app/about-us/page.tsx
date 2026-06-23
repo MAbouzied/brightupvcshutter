@@ -13,7 +13,7 @@ import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 const META_DESCRIPTION =
-  "تعرف على برايت شتر — شركة متخصصة في توريد وتركيب الرولنج شاتر وUPVC والألومنيوم وشيش الحصيرة وكبائن الاستحمام في مصر. فريق هندسي وفني، ضمان ضد عيوب الصناعة، وخدمة ما بعد البيع.";
+  "تعرف على برايت شاتر — شركة متخصصة في توريد وتركيب الرولينج شاتر ونوافذ وأبواب UPVC والألومنيوم وكبائن الاستحمام في مصر.";
 
 export const metadata = pageMetadata({
   title: "من نحن",
@@ -87,7 +87,7 @@ export default function AboutPage() {
           <div className="relative aspect-[570/630] overflow-hidden rounded-3xl shadow-xl">
             <Image
               src={ABOUT.intro.image}
-              alt="رولنج شاتر مثبت على واجهة مبنى — برايت شتر"
+              alt="رولنج شاتر مثبت على واجهة مبنى — برايت شاتر"
               fill
               className="object-cover object-center"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -123,7 +123,7 @@ export default function AboutPage() {
       <section className="section-pad mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="ما الذي نتخصص فيه؟"
-          description="حلول متكاملة للحماية والعزل والتشطيب — من الشتر إلى النوافذ وكبائن الاستحمام."
+          description="حلول متكاملة للحماية والعزل والتشطيب — من الشاتر إلى النوافذ وكبائن الاستحمام."
         />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {SERVICES.map((service) => (
@@ -137,7 +137,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 max-w-3xl">
             <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-              لماذا يختار العملاء برايت شتر؟
+              لماذا يختار العملاء برايت شاتر؟
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">
               نركّز على الجودة والتفاصيل والخدمة المتكاملة — من أول تواصل حتى ما بعد التركيب.
@@ -200,7 +200,7 @@ export default function AboutPage() {
           <div className="relative aspect-square overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
             <Image
               src={ABOUT.quality.image}
-              alt="منتجات برايت شتر — شتر وألومنيوم وUPVC"
+              alt="منتجات برايت شاتر — شاتر وألومنيوم وUPVC"
               fill
               className="object-contain p-4"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -232,7 +232,7 @@ export default function AboutPage() {
             >
               <Image
                 src={project.image}
-                alt={`${project.title} — مشروع برايت شتر`}
+                alt={`${project.title} — مشروع برايت شاتر`}
                 fill
                 className="object-cover object-center transition duration-500 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -262,12 +262,6 @@ export default function AboutPage() {
                     <span className="font-semibold text-slate-900">العنوان: </span>
                     {SITE.address.street}، {SITE.address.country}
                   </p>
-                  <p>
-                    <span className="font-semibold text-slate-900">البريد: </span>
-                    <a href={`mailto:${SITE.email}`} className="text-[var(--color-primary)] hover:underline">
-                      {SITE.email}
-                    </a>
-                  </p>
                 </address>
                 <Link
                   href="/contact-us/"
@@ -279,7 +273,7 @@ export default function AboutPage() {
               <div className="relative min-h-64 bg-slate-100 lg:min-h-full">
                 <Image
                   src={ABOUT.intro.secondaryImage}
-                  alt="أعمال برايت شتر — نوافذ UPVC"
+                  alt="أعمال برايت شاتر — نوافذ UPVC"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -292,14 +286,14 @@ export default function AboutPage() {
 
       {/* FAQ */}
       <section className="section-pad mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <FAQSection id="faq-about" title="أسئلة شائعة عن برايت شتر" faqs={ABOUT.faqs} />
+        <FAQSection id="faq-about" title="أسئلة شائعة عن برايت شاتر" faqs={ABOUT.faqs} />
       </section>
 
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <CTABanner
           title="هل تبحث عن شريك موثوق لتنفيذ مشروعك؟"
-          description="اطلب معاينة أو عرض سعر — فريقنا جاهز لمساعدتك في اختيار الحل المناسب للشتر والألومنيوم وUPVC."
+          description="اطلب معاينة أو عرض سعر — فريقنا جاهز لمساعدتك في اختيار الحل المناسب للشاتر والألومنيوم وUPVC."
         />
       </section>
     </>

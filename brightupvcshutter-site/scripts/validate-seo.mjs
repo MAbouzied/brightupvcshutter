@@ -17,12 +17,9 @@ const ROUTES = [
   "/our-projects/",
   "/contact-us/",
   "/shutter/",
-  "/mesh-shutters/",
-  "/smart-shutter/",
   "/upvc-windows/",
   "/aluminum-windows-and-doors/",
   "/shower-cabins/",
-  "/handrail/",
 ];
 
 function htmlPath(route) {

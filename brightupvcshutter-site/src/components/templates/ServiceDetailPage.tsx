@@ -36,7 +36,7 @@ export function ServiceDetailPage({ service }: { service: ServiceDetail }) {
           ...service.gallery.slice(0, 3).map((img) =>
             imageObjectSchema({
               name: `${service.title} — مشروع`,
-              description: `صورة من أعمال ${service.title} لدى برايت شتر`,
+              description: `صورة من أعمال ${service.title} لدى برايت شاتر`,
               path: img,
             }),
           ),
@@ -59,7 +59,7 @@ export function ServiceDetailPage({ service }: { service: ServiceDetail }) {
           >
             <Image
               src={service.heroImage}
-              alt={`${service.title} — برايت شتر`}
+              alt={`${service.title} — برايت شاتر`}
               fill
               className={heroIsGraphic ? "object-contain p-4" : "object-cover object-center"}
               priority

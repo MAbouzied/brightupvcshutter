@@ -10,9 +10,10 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = pageMetadata({
   title: "مشاريعنا",
-  description: "معرض مشاريع برايت شتر — الرولنج شاتر، شيش الحصيرة، UPVC، الألومنيوم، كبائن الاستحمام والدرابزين.",
+  description:
+    "معرض مشاريع برايت شاتر — الرولينج شاتر، نوافذ وأبواب UPVC، نوافذ وأبواب الألومنيوم، وكبائن الاستحمام.",
   path: "/our-projects/",
-  image: "/images/projects/bright-33.jpg",
+  image: "/images/home/10.jpeg",
 });
 
 export default function ProjectsPage() {
@@ -27,7 +28,7 @@ export default function ProjectsPage() {
         data={[
           webPageSchema({
             title: "مشاريعنا",
-            description: "معرض مشاريع برايت شتر",
+            description: "معرض مشاريع برايت شاتر",
             path: "/our-projects/",
           }),
           breadcrumbSchema(breadcrumbs),

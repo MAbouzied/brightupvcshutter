@@ -17,7 +17,7 @@ export function pageMetadata({
   noIndex = false,
 }: PageSeo): Metadata {
   const url = `${SITE.url}${path}`;
-  const fullTitle = path === "/" ? `${SITE.name} | ${SITE.tagline}` : `${title} | ${SITE.name}`;
+  const fullTitle = path === "/" ? title : `${title} | ${SITE.name}`;
 
   return {
     title: fullTitle,

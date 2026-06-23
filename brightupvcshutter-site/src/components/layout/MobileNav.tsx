@@ -106,21 +106,6 @@ export function MobileNav() {
                   >
                     {item.label}
                   </Link>
-                  {item.children && (
-                    <ul className="mb-2 space-y-1 border-s-2 border-slate-100 ps-3 ms-3">
-                      {item.children.map((child) => (
-                        <li key={child.href}>
-                          <Link
-                            href={child.href}
-                            onClick={close}
-                            className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-[var(--color-primary)]"
-                          >
-                            {child.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
                 </li>
               ))}
             </ul>

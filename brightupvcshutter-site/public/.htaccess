@@ -13,10 +13,15 @@ RewriteRule ^(.*)$ /$1/ [L,R=301]
 RedirectMatch 301 ^/upvc-windows-and-doors/?$ /upvc-windows/
 RedirectMatch 301 ^/upvc-windows-and-doors/(.*)$ /upvc-windows/$1
 
-# Old WP page 4218 used slug "shutter" for mesh content — route to mesh-shutters
-# (rolling shutter remains at /shutter/ from home menu)
-RedirectMatch 301 ^/mesh-shutter/?$ /mesh-shutters/
-RedirectMatch 301 ^/mesh-shutter/(.*)$ /mesh-shutters/$1
+# Old WP page 4218 used slug "shutter" for mesh content — route removed services to hub
+RedirectMatch 301 ^/mesh-shutter/?$ /our-services/
+RedirectMatch 301 ^/mesh-shutter/(.*)$ /our-services/$1
+RedirectMatch 301 ^/mesh-shutters/?$ /our-services/
+RedirectMatch 301 ^/mesh-shutters/(.*)$ /our-services/$1
+RedirectMatch 301 ^/smart-shutter/?$ /our-services/
+RedirectMatch 301 ^/smart-shutter/(.*)$ /our-services/$1
+RedirectMatch 301 ^/handrail/?$ /our-services/
+RedirectMatch 301 ^/handrail/(.*)$ /our-services/$1
 
 # Common WP paths — send to homepage or relevant page
 RedirectMatch 301 ^/wp-admin/?(.*)$ /

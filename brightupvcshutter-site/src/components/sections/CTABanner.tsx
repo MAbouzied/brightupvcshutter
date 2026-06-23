@@ -4,7 +4,7 @@ import { PhoneLink } from "@/components/ui/PhoneLink";
 
 export function CTABanner({
   title = "جاهزون لبدء مشروعك؟",
-  description = "اطلب معاينة أو عرض سعر — فريقنا يساعدك في اختيار الحل المناسب للشتر والألومنيوم وUPVC.",
+  description = "اطلب معاينة أو عرض سعر — فريقنا يساعدك في اختيار الحل المناسب للشاتر والألومنيوم وUPVC.",
 }: {
   title?: string;
   description?: string;

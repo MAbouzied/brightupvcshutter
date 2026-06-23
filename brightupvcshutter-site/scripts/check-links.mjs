@@ -20,9 +20,6 @@ const PAGE_ROUTES = new Set([
   "/upvc-windows/",
   "/aluminum-windows-and-doors/",
   "/shower-cabins/",
-  "/handrail/",
-  "/mesh-shutters/",
-  "/smart-shutter/",
 ]);
 
 if (!fs.existsSync(OUT)) {

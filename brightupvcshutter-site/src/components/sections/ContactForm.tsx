@@ -45,30 +45,17 @@ export function ContactForm() {
       className="space-y-5 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
     >
       <h2 className="text-lg font-bold text-slate-900">أرسل رسالة</h2>
-      <div className="grid gap-5 sm:grid-cols-2">
-        <label className="block text-sm font-medium text-slate-700">
-          الاسم *
-          <input
-            required
-            name="name"
-            type="text"
-            autoComplete="name"
-            className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
-            placeholder="الاسم الكامل"
-          />
-        </label>
-        <label className="block text-sm font-medium text-slate-700">
-          البريد الإلكتروني *
-          <input
-            required
-            name="email"
-            type="email"
-            autoComplete="email"
-            className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
-            placeholder="example@email.com"
-          />
-        </label>
-      </div>
+      <label className="block text-sm font-medium text-slate-700">
+        الاسم *
+        <input
+          required
+          name="name"
+          type="text"
+          autoComplete="name"
+          className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+          placeholder="الاسم الكامل"
+        />
+      </label>
 
       <label className="block text-sm font-medium text-slate-700">
         رقم الجوال

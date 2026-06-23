@@ -11,9 +11,9 @@ import { JsonLd } from "@/components/seo/JsonLd";
 export const metadata = pageMetadata({
   title: "خدماتنا",
   description:
-    "خدمات برايت شتر: الرولنج شاتر، شيش الحصيرة، الشتر الذكي، أبواب ونوافذ UPVC والألومنيوم، كبائن الاستحمام، والدرابزين — توريد وتركيب في مصر.",
+    "خدمات برايت شاتر: الرولينج شاتر، نوافذ وأبواب UPVC، نوافذ وأبواب الألومنيوم، وكبائن الاستحمام — توريد وتركيب في مصر.",
   path: "/our-services/",
-  image: "/images/services/shutter/card.png",
+  image: "/images/home/2.jpeg",
 });
 
 export default function ServicesPage() {
@@ -28,7 +28,7 @@ export default function ServicesPage() {
         data={[
           webPageSchema({
             title: "خدماتنا",
-            description: "خدمات التوريد والتركيب لدى برايت شتر",
+            description: "خدمات التوريد والتركيب لدى برايت شاتر",
             path: "/our-services/",
           }),
           breadcrumbSchema(breadcrumbs),

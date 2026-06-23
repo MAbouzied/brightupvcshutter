@@ -14,7 +14,6 @@ export function contactPointSchema() {
     "@id": SCHEMA_IDS.contactPoint,
     contactType: "customer service",
     telephone: SITE.phones.map((phone) => phone.tel),
-    email: SITE.email,
     areaServed: {
       "@type": "Country",
       name: "Egypt",
@@ -31,7 +30,6 @@ export function localBusinessSchema() {
     alternateName: SITE.legalName,
     description: SITE.description,
     url: SITE.url,
-    email: SITE.email,
     telephone: SITE.phones.map((phone) => phone.tel),
     image: `${SITE.url}/images/brand/logo.png`,
     logo: `${SITE.url}/images/brand/logo.png`,

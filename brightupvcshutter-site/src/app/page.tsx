@@ -7,16 +7,19 @@ import { ServiceCard } from "@/components/sections/ServiceCard";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { SectionHeading } from "@/components/sections/SectionHeading";
-import { TrustBar } from "@/components/sections/TrustBar";
 import { faqSchema, webPageSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SITE } from "@/lib/site";
 
+const META_TITLE = "برايت UPVC & شاتر | نوافذ وأبواب وشاتر وكبائن استحمام";
+const META_DESCRIPTION =
+  "برايت UPVC & شاتر تقدم حلول الرولينج شاتر، نوافذ وأبواب UPVC، نوافذ وأبواب الألومنيوم، وكبائن الاستحمام بجودة تنفيذ عالية وتصميمات عصرية.";
+
 export const metadata = pageMetadata({
-  title: SITE.name,
-  description: SITE.description,
+  title: META_TITLE,
+  description: META_DESCRIPTION,
   path: "/",
-  image: "/images/hero/bright-3.jpg",
+  image: "/images/home/1.jpeg",
 });
 
 export default function HomePage() {
@@ -25,8 +28,8 @@ export default function HomePage() {
       <JsonLd
         data={[
           webPageSchema({
-            title: SITE.name,
-            description: SITE.description,
+            title: META_TITLE,
+            description: META_DESCRIPTION,
             path: "/",
             mainEntityId: `${SITE.url}/#faq`,
           }),
@@ -34,88 +37,86 @@ export default function HomePage() {
         ]}
       />
 
-      <section className="relative overflow-hidden bg-slate-950 text-white">
-        <div className="absolute inset-0 opacity-35">
+      {/* Hero */}
+      <section className="hero relative min-h-[min(100svh,920px)] overflow-hidden bg-slate-950 text-white">
+        <div className="hero__media absolute inset-0">
           <Image
             src={HOME.hero.image}
-            alt=""
+            alt="واجهة منزل مع رولينج شاتر — برايت UPVC & شاتر"
             fill
-            className="object-cover object-center"
+            className="hero__image object-cover object-center"
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-l from-slate-950 via-slate-950/90 to-slate-950/60" />
         </div>
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-24">
-          <div>
-            <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+        <div className="hero__overlay absolute inset-0" aria-hidden />
+
+        <div className="relative mx-auto flex min-h-[min(100svh,920px)] max-w-7xl items-center px-4 py-28 sm:px-6 lg:px-8 lg:py-32">
+          <div className="hero__content max-w-2xl">
+            <p className="hero__eyebrow">
+              <span className="hero__eyebrow-dot" aria-hidden />
+              {HOME.hero.eyebrow}
+              <span className="text-white/50"> · </span>
+              {SITE.tagline}
+            </p>
+
+            <h1 className="hero__title mt-5 text-4xl font-bold leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl">
               {HOME.hero.title}
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-8 text-slate-300">{HOME.hero.subtitle}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/contact-us/"
-                className="rounded-full bg-[var(--color-secondary)] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:brightness-110"
-              >
-                اطلب عرض سعر
+
+            <p className="hero__lead mt-5 text-lg font-semibold leading-8 text-blue-100 sm:text-xl">
+              {HOME.hero.lead}
+            </p>
+
+            <p className="hero__description mt-4 max-w-xl text-sm leading-8 text-slate-300 sm:text-base">
+              {HOME.hero.description}
+            </p>
+
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link href="/contact-us/" className="hero__btn hero__btn--primary">
+                تواصل معنا
               </Link>
-              <Link
-                href="/our-services/"
-                className="rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                استعرض خدماتنا
+              <Link href="/our-projects/" className="hero__btn hero__btn--secondary">
+                أعمالنا
               </Link>
             </div>
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-slate-900/50 shadow-2xl">
-            <Image
-              src="/images/services/shutter/card.png"
-              alt="الرولنج شاتر — برايت شتر"
-              fill
-              className="object-contain p-4"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
-            />
+
+            <ul className="hero__highlights mt-10 flex flex-wrap gap-2.5">
+              {HOME.hero.highlights.map((item) => (
+                <li key={item} className="hero__chip">
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      <TrustBar />
-
+      {/* Services */}
       <section className="section-pad mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          title="خدماتنا"
-          description="حلول متكاملة للحماية والأمان — توريد وتركيب بجودة عالية وخدمة ما بعد البيع."
-        />
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <SectionHeading title="خدماتنا" description={HOME.servicesIntro} />
+        <div className="grid gap-6 md:grid-cols-2">
           {SERVICES.map((service) => (
             <ServiceCard key={service.slug} service={service} />
           ))}
         </div>
-        <div className="mt-8 text-center">
-          <Link
-            href="/our-services/"
-            className="inline-flex rounded-full border border-slate-200 px-6 py-2.5 text-sm font-semibold text-[var(--color-primary)] transition hover:bg-slate-50"
-          >
-            عرض جميع الخدمات
-          </Link>
-        </div>
       </section>
 
+      {/* Why Bright */}
       <section className="section-pad bg-slate-50">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div className="relative aspect-[570/630] overflow-hidden rounded-3xl shadow-lg">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-xl">
             <Image
-              src={HOME.aboutTeaser.image}
-              alt="رولنج شاتر مثبت على واجهة مبنى — برايت شتر"
+              src={HOME.why.image}
+              alt="Bright UPVC & شاتر — رولينج شاتر عالي الجودة"
               fill
               className="object-cover object-center"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">{HOME.aboutTeaser.title}</h2>
-            <p className="mt-5 text-sm leading-8 text-slate-600 sm:text-base">{HOME.aboutTeaser.body}</p>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">{HOME.why.title}</h2>
+            <p className="mt-5 text-base leading-8 text-slate-600">{HOME.why.body}</p>
             <Link
               href="/about-us/"
               className="mt-6 inline-flex rounded-lg text-sm font-semibold text-[var(--color-primary)] transition hover:underline"
@@ -126,53 +127,65 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-pad mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading title="لماذا برايت شتر؟" />
-        <div className="grid gap-5 md:grid-cols-3">
-          {HOME.process.map((item) => (
-            <article
-              key={item.title}
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-            >
-              <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-600">{item.description}</p>
-            </article>
-          ))}
+      {/* Why highlights */}
+      <section className="section-pad bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading title={HOME.whyHighlights.title} />
+          <div className="grid gap-6 md:grid-cols-3">
+            {HOME.whyHighlights.items.map((item) => (
+              <article
+                key={item.title}
+                className="card-hover group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                  <Image
+                    src={item.image}
+                    alt={`${item.title} — برايت شاتر`}
+                    fill
+                    className="object-cover object-center transition duration-500 group-hover:scale-[1.03]"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-6 text-right">
+                  <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-7 text-slate-600">{item.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="section-pad bg-slate-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">مشاريعنا</h2>
-              <p className="mt-2 text-sm text-slate-600">نماذج من أعمال التوريد والتركيب</p>
-            </div>
-            <Link href="/our-projects/" className="text-sm font-semibold text-[var(--color-primary)] hover:underline">
-              عرض الكل ←
+      {/* Projects */}
+      <section className="section-pad mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">{HOME.projects.title}</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">{HOME.projects.subtitle}</p>
+          </div>
+          <Link href="/our-projects/" className="text-sm font-semibold text-[var(--color-primary)] hover:underline">
+            عرض الكل ←
+          </Link>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {HOME.projects.items.map((project) => (
+            <Link
+              key={project.title}
+              href={project.href}
+              className="group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-md"
+            >
+              <Image
+                src={project.image}
+                alt={`${project.title} — مشروع برايت شاتر`}
+                fill
+                className="object-cover object-center transition duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-5 text-base font-bold text-white">
+                {project.title}
+              </span>
             </Link>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {HOME.projectsPreview.map((project) => (
-              <Link
-                key={project.title}
-                href={project.href}
-                className="group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-sm"
-              >
-                <Image
-                  src={project.image}
-                  alt={`${project.title} — مشروع برايت شتر`}
-                  fill
-                  className="object-cover object-center transition duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  loading="lazy"
-                />
-                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-4 text-sm font-bold text-white">
-                  {project.title}
-                </span>
-              </Link>
-            ))}
-          </div>
+          ))}
         </div>
       </section>
 

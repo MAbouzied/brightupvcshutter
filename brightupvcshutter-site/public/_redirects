@@ -2,8 +2,14 @@
 
 /upvc-windows-and-doors/ /upvc-windows/ 301
 /upvc-windows-and-doors/* /upvc-windows/:splat 301
-/mesh-shutter/ /mesh-shutters/ 301
-/mesh-shutter/* /mesh-shutters/:splat 301
+/mesh-shutter/ /our-services/ 301
+/mesh-shutter/* /our-services/:splat 301
+/mesh-shutters/ /our-services/ 301
+/mesh-shutters/* /our-services/:splat 301
+/smart-shutter/ /our-services/ 301
+/smart-shutter/* /our-services/:splat 301
+/handrail/ /our-services/ 301
+/handrail/* /our-services/:splat 301
 /wp-admin/* / 301
 /wp-login.php / 301
 /wp-content/* / 301
