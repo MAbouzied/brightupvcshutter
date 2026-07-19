@@ -21,6 +21,28 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
+  openGraph: {
+    type: "website",
+    locale: SITE.locale,
+    siteName: SITE.legalName,
+    images: [
+      {
+        url: SITE.ogImage,
+        width: 1288,
+        height: 360,
+        alt: `${SITE.legalName} — ${SITE.tagline}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [SITE.ogImage],
+  },
+  alternates: {
+    types: {
+      "text/plain": [{ url: "/llms.txt", title: "LLMs.txt" }],
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "440x440", type: "image/png" },

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SITE, MAIN_NAV, FOOTER_SERVICES } from "@/lib/site";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 
 export function Footer() {
   return (
@@ -8,7 +9,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div className="space-y-4 lg:col-span-1">
           <Image
-            src="/images/brand/logo.png"
+            src="/images/brand/bright-upvc-shutter-logo.png"
             alt={SITE.name}
             width={180}
             height={50}
@@ -64,6 +65,9 @@ export function Footer() {
               </a>
             </p>
             <p>{SITE.address.display}</p>
+            <div className="pt-1">
+              <SocialLinks variant="dark" />
+            </div>
           </address>
         </div>
       </div>

@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "check-links": "node scripts/check-links.mjs",
+    "rename-images-seo": "node scripts/rename-images-seo.mjs",
     "validate-seo": "node scripts/validate-seo.mjs",
     "start": "next start",
     "lint": "eslint"

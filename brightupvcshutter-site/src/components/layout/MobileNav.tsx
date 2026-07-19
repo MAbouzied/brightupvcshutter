@@ -78,7 +78,7 @@ export function MobileNav() {
           <div className="flex items-center justify-between gap-4 border-b border-slate-200 px-5 py-4">
             <Link href="/" onClick={close} className="shrink-0" aria-label={SITE.name}>
               <Image
-                src="/images/brand/logo.png"
+                src="/images/brand/bright-upvc-shutter-logo.png"
                 alt={SITE.name}
                 width={140}
                 height={40}

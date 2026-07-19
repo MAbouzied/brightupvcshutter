@@ -10,7 +10,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 export function ServiceDetailPage({ service }: { service: ServiceDetail }) {
   const breadcrumbs = [
     { name: "الرئيسية", path: "/" },
-    { name: "خدماتنا", path: "/our-services/" },
+    { name: "مشاريعنا", path: "/our-projects/" },
     { name: service.title, path: service.href },
   ];
 

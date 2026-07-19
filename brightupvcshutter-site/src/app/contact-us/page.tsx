@@ -4,6 +4,7 @@ import { CONTACT_FAQS } from "@/content/contact";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { PageHero } from "@/components/sections/PageHero";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 import { breadcrumbSchema, contactPageSchema, contactPointSchema, faqSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -12,6 +13,7 @@ export const metadata = pageMetadata({
   description:
     "تواصل مع برايت شاتر لطلب عرض سعر أو استفسار عن الرولنج شاتر ونوافذ UPVC والألومنيوم في مصر. هاتف: 010 6004 2508",
   path: "/contact-us/",
+  image: SITE.ogImage,
 });
 
 export default function ContactPage() {
@@ -67,6 +69,12 @@ export default function ContactPage() {
                 </a>
               </p>
             </address>
+          </div>
+          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 className="text-lg font-bold text-slate-900">تابعنا على وسائل التواصل</h2>
+            <div className="mt-4">
+              <SocialLinks />
+            </div>
           </div>
           <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-sm">
             <iframe

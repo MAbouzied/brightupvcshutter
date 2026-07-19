@@ -1,4 +1,5 @@
 import type { ServiceDetail } from "@/types/service";
+import { serviceGallery } from "@/lib/gallery";
 
 export const shutterService: ServiceDetail = {
   slug: "shutter",
@@ -6,20 +7,33 @@ export const shutterService: ServiceDetail = {
   metaDescription:
     "توريد وتركيب الرولنج شاتر في مصر — عزل حراري وصوتي، حماية من الشمس والأمطار، تشغيل يدوي أو كهربائي. برايت شاتر لحلول الشاتر المتكاملة.",
   href: "/shutter/",
-  heroImage: "/images/services/shutter/card.png",
+  heroImage: "/images/services/shutter/bright-rolling-shutter-service-hero.png",
   intro: [
     "الرولنج شاتر هو نوع من الستائر أو النوافذ المصنوعة من مواد صلبة مثل الألمنيوم أو الخشب أو البلاستيك، حيث تكون عبارة عن شرائح متصلة يمكن فتحها أو إغلاقها لتحكم في مرور الضوء والتهوية. تُستخدم الشاتر عادةً على النوافذ لتوفير الخصوصية والحماية من العوامل الجوية مثل الشمس والمطر.",
-    "يتميز الشاتر بقدرته على العزل الحراري والصوتي، مما يساعد في توفير بيئة مريحة داخل المنزل. الشاتر يوفر لك الحرية بالاستمتاع بمنظر العالم الخارجي دون عوائق. يتوفر الشاتر بمجموعة واسعة من الألوان لتناسب الأذواق المختلفة. لا حاجة للحواجز الفولاذية التي قد تكون كذلك تتأثر بالظروف الجوية تسبب الصدأ.",
+    "يتميز الشاتر بقدرته على العزل الحراري والصوتي، مما يساعد في توفير بيئة مريحة داخل المنزل. الشاتر يوفر لك الحرية بالاستمتاع بمنظر العالم الخارجي دون عوائق. يتوفر الشاتر بمجموعة واسعة من الألوان لتناسب الأذواق المختلفة. لا حاجة للحواجز الفولاذية وتسبب الصدأ.",
   ],
-  gallery: [
-    "/images/services/shutter/WhatsApp-Image-2024-11-18-at-16.14.30_4115251a.jpg",
-    "/images/services/shutter/WhatsApp-Image-2024-11-18-at-16.14.29_881cfd05.jpg",
-    "/images/services/shutter/WhatsApp-Image-2024-11-18-at-16.14.29_f0035166.jpg",
-    "/images/services/shutter/WhatsApp-Image-2024-11-18-at-16.14.29_3b4ee0e5.jpg",
-    "/images/services/shutter/WhatsApp-Image-2024-11-18-at-16.14.30_e2deac91.jpg",
-    "/images/services/shutter/WhatsApp-Image-2024-11-18-at-16.14.51_61605bc6.jpg",
-    "/images/services/shutter/WhatsApp-Image-2024-11-18-at-16.14.27_2b61b708.jpg",
-  ],
+  gallery: serviceGallery("shutter", [
+    "bright-rolling-shutter-gallery-01.jpeg",
+    "bright-rolling-shutter-gallery-02.jpeg",
+    "bright-rolling-shutter-gallery-03.jpeg",
+    "bright-rolling-shutter-gallery-04.jpeg",
+    "bright-rolling-shutter-gallery-05.jpeg",
+    "bright-rolling-shutter-gallery-06.jpeg",
+    "bright-rolling-shutter-gallery-07.jpeg",
+    "bright-rolling-shutter-gallery-08.jpeg",
+    "bright-rolling-shutter-gallery-09.jpeg",
+    "bright-rolling-shutter-gallery-10.jpeg",
+    "bright-rolling-shutter-gallery-11.jpeg",
+    "bright-rolling-shutter-gallery-12.jpeg",
+    "bright-rolling-shutter-gallery-13.jpeg",
+    "bright-rolling-shutter-gallery-14.jpeg",
+    "bright-rolling-shutter-gallery-15.jpeg",
+    "bright-rolling-shutter-gallery-16.jpeg",
+    "bright-rolling-shutter-gallery-17.jpeg",
+    "bright-rolling-shutter-gallery-18.jpeg",
+    "bright-rolling-shutter-gallery-19.jpeg",
+    "bright-rolling-shutter-gallery-20.jpeg"
+  ]),
   features: [
     {
       title: "حماية من العوامل الجوية",

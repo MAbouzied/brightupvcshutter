@@ -13,7 +13,6 @@ const OUT = path.join(__dirname, "..", "out");
 const PAGE_ROUTES = new Set([
   "/",
   "/about-us/",
-  "/our-services/",
   "/our-projects/",
   "/contact-us/",
   "/shutter/",

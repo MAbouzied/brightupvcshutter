@@ -13,15 +13,17 @@ RewriteRule ^(.*)$ /$1/ [L,R=301]
 RedirectMatch 301 ^/upvc-windows-and-doors/?$ /upvc-windows/
 RedirectMatch 301 ^/upvc-windows-and-doors/(.*)$ /upvc-windows/$1
 
-# Old WP page 4218 used slug "shutter" for mesh content — route removed services to hub
-RedirectMatch 301 ^/mesh-shutter/?$ /our-services/
-RedirectMatch 301 ^/mesh-shutter/(.*)$ /our-services/$1
-RedirectMatch 301 ^/mesh-shutters/?$ /our-services/
-RedirectMatch 301 ^/mesh-shutters/(.*)$ /our-services/$1
-RedirectMatch 301 ^/smart-shutter/?$ /our-services/
-RedirectMatch 301 ^/smart-shutter/(.*)$ /our-services/$1
-RedirectMatch 301 ^/handrail/?$ /our-services/
-RedirectMatch 301 ^/handrail/(.*)$ /our-services/$1
+# Old WP page 4218 used slug "shutter" for mesh content — route removed services to homepage
+RedirectMatch 301 ^/our-services/?$ /
+RedirectMatch 301 ^/our-services/(.*)$ /
+RedirectMatch 301 ^/mesh-shutter/?$ /
+RedirectMatch 301 ^/mesh-shutter/(.*)$ /
+RedirectMatch 301 ^/mesh-shutters/?$ /
+RedirectMatch 301 ^/mesh-shutters/(.*)$ /
+RedirectMatch 301 ^/smart-shutter/?$ /
+RedirectMatch 301 ^/smart-shutter/(.*)$ /
+RedirectMatch 301 ^/handrail/?$ /
+RedirectMatch 301 ^/handrail/(.*)$ /
 
 # Common WP paths — send to homepage or relevant page
 RedirectMatch 301 ^/wp-admin/?(.*)$ /
@@ -31,7 +33,7 @@ RedirectMatch 301 ^/feed/?$ /
 RedirectMatch 301 ^/comments/feed/?$ /
 
 # Arabic slug variants (URL-encoded) from old menu if indexed
-RedirectMatch 301 ^/%d8%ae%d8%af%d9%85%d8%a7%d8%aa%d9%86%d8%a7/?$ /our-services/
+RedirectMatch 301 ^/%d8%ae%d8%af%d9%85%d8%a7%d8%aa%d9%86%d8%a7/?$ /
 RedirectMatch 301 ^/%d9%85%d8%b4%d8%a7%d8%b1%d9%8a%d8%b9%d9%86%d8%a7/?$ /our-projects/
 RedirectMatch 301 ^/%d8%aa%d9%88%d8%a7%d8%b5%d9%84-%d9%85%d8%b9%d9%86%d8%a7/?$ /contact-us/
 RedirectMatch 301 ^/%d9%85%d9%86-%d9%86%d8%ad%d9%86/?$ /about-us/

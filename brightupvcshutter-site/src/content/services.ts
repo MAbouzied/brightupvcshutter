@@ -13,7 +13,7 @@ export const SERVICES: Service[] = [
     title: "الرولينج شاتر",
     shortDescription:
       "نظام عملي وأنيق يساعد على الحماية والخصوصية والتحكم في الإضاءة، مناسب للمنازل والفيلات والمحال.",
-    cardImage: "/images/home/2.jpeg",
+    cardImage: "/images/home/bright-home-card-rolling-shutter.jpeg",
     href: "/shutter/",
     wpPageId: 4144,
   },
@@ -22,7 +22,7 @@ export const SERVICES: Service[] = [
     title: "نوافذ وأبواب UPVC",
     shortDescription:
       "حلول عزل قوية ضد الحرارة والصوت، بتصميمات حديثة ومتانة عالية تناسب الاستخدام اليومي.",
-    cardImage: "/images/home/3.jpeg",
+    cardImage: "/images/home/bright-home-card-upvc-windows.jpeg",
     href: "/upvc-windows/",
     wpPageId: 4157,
   },
@@ -31,7 +31,7 @@ export const SERVICES: Service[] = [
     title: "نوافذ وأبواب الألومنيوم",
     shortDescription:
       "تصميمات عملية وعصرية للنوافذ والأبواب، تجمع بين الشكل الأنيق وقوة التحمل.",
-    cardImage: "/images/home/5.jpeg",
+    cardImage: "/images/cards/bright-service-card-aluminum-windows.png",
     href: "/aluminum-windows-and-doors/",
     wpPageId: 4856,
   },
@@ -40,7 +40,7 @@ export const SERVICES: Service[] = [
     title: "كبائن الاستحمام",
     shortDescription:
       "كبائن زجاجية بتصميمات مختلفة تضيف لمسة فخامة وتنظيم لمساحات الحمام.",
-    cardImage: "/images/home/4.jpeg",
+    cardImage: "/images/cards/bright-service-card-shower-cabin.png",
     href: "/shower-cabins/",
     wpPageId: 4285,
   },

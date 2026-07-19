@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { imageAltFromPath } from "@/lib/gallery";
 
 export function ImageGallery({ images, title }: { images: string[]; title: string }) {
   return (
@@ -10,7 +11,7 @@ export function ImageGallery({ images, title }: { images: string[]; title: strin
         >
           <Image
             src={src}
-            alt={`${title} — صورة ${index + 1} من أعمال برايت شاتر`}
+            alt={imageAltFromPath(src, title, index)}
             fill
             className="object-cover object-center transition duration-500 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 33vw"

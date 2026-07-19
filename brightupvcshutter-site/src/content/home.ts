@@ -5,15 +5,15 @@ export const HOME = {
     lead: "حلول متكاملة للرولينج شاتر، نوافذ وأبواب UPVC والألومنيوم، وكبائن الاستحمام",
     description:
       "تصميمات عصرية وجودة تنفيذ عالية — نحوّل احتياجاتك إلى مساحات آمنة وأنيقة مع فريق هندسي وفني متخصص في مصر.",
-    image: "/images/home/1.jpeg",
+    image: "/images/home/bright-home-hero-facade.jpeg",
     highlights: ["توريد وتركيب متكامل", "ضمان ضد عيوب الصناعة", "خدمة ما بعد البيع"],
   },
   servicesIntro:
     "نقدم حلولًا عملية وأنيقة للمنازل والمشروعات، بداية من الرولينج شاتر وحتى نوافذ وأبواب UPVC والألومنيوم وكبائن الاستحمام.",
   why: {
     title: "عن Bright UPVC & Shutter",
-    body: "نقدم خدمات متكامله في مجال التوريد والتركيب للنوافذ والأبواب UPVC و الألومنيوم وشيش الحصيرة وكبائن الاستحمام التي تساعد الأفراد والمنشآت في تحقيق أفضل سبل الحماية والراحة والأمان. فريق عمل من أمهر المهندسين والفنيين علي درجة عاليه من الخبرة والكفاءة. تقدم الشركة الضمان المطلوب لكل منتج ضد عيوب الصناعه ، وتوفر الصيانه الفورية وخدمة ما بعد البيع لعملائها.",
-    image: "/images/home/6.jpeg",
+    body: "نقدم خدمات متكامله في مجال التوريد والتركيب للنوافذ والأبواب UPVC و الألومنيوم والرولينج شاتر وكبائن الاستحمام التي تساعد الأفراد والمنشآت في تحقيق أفضل سبل الحماية والراحة والأمان. فريق عمل من أمهر المهندسين والفنيين علي درجة عاليه من الخبرة والكفاءة. تقدم الشركة الضمان المطلوب لكل منتج ضد عيوب الصناعه ، وتوفر الصيانه الفورية وخدمة ما بعد البيع لعملائها.",
+    image: "/images/home/bright-home-about-section.jpeg",
   },
   whyHighlights: {
     title: "لماذا برايت شتر؟",
@@ -21,36 +21,36 @@ export const HOME = {
       {
         title: "أفضل خدمة بطرق احترافية",
         description: "فريق هندسي وفني متخصص يضمن جودة التنفيذ وفق أعلى المعايير.",
-        image: "/images/home/7.jpeg",
+        image: "/images/home/bright-home-why-professional-service.jpeg",
       },
       {
         title: "التنفيذ والتسليم",
         description: "التزام بمواعيد التسليم مع متابعة دقيقة لمراحل العمل.",
-        image: "/images/home/8.jpeg",
+        image: "/images/home/bright-home-why-delivery.jpeg",
       },
       {
         title: "بفضل الاهتمام بالتفاصيل",
         description: "نهتم بكل تفصيلة لضمان نتيجة نهائية متقنة وآمنة.",
-        image: "/images/home/9.jpeg",
+        image: "/images/home/bright-home-why-details.jpeg",
       },
     ],
   },
   projects: {
     title: "مشاريعنا",
     subtitle:
-      "نماذج من أعمالنا في الرولينج شاتر، نوافذ وأبواب UPVC، نوافذ وأبواب الألومنيوم، وكبائن الاستحمام.",
+      "نماذج من مشاريعنا في الرولينج شاتر، نوافذ وأبواب UPVC، نوافذ وأبواب الألومنيوم، وكبائن الاستحمام.",
     items: [
-      { title: "الرولينج شاتر", image: "/images/home/10.jpeg", href: "/shutter/" },
-      { title: "نوافذ وأبواب UPVC", image: "/images/home/11.jpeg", href: "/upvc-windows/" },
-      { title: "نوافذ وأبواب الألومنيوم", image: "/images/home/13.jpeg", href: "/aluminum-windows-and-doors/" },
-      { title: "كبائن الاستحمام", image: "/images/home/12.jpeg", href: "/shower-cabins/" },
+      { title: "الرولينج شاتر", image: "/images/projects/bright-project-rolling-shutter-egypt.png", href: "/shutter/" },
+      { title: "نوافذ وأبواب UPVC", image: "/images/projects/bright-project-upvc-windows-egypt.png", href: "/upvc-windows/" },
+      { title: "نوافذ وأبواب الألومنيوم", image: "/images/projects/bright-project-aluminum-windows-egypt.png", href: "/aluminum-windows-and-doors/" },
+      { title: "كبائن الاستحمام", image: "/images/projects/bright-project-shower-cabin-egypt.png", href: "/shower-cabins/" },
     ],
   },
   faqs: [
     {
       question: "ما الخدمات التي تقدمها برايت شاتر؟",
       answer:
-        "نقدم الرولينج شاتر، نوافذ وأبواب UPVC، نوافذ وأبواب الألومنيوم، وكبائن الاستحمام — توريد وتركيب.",
+        "توريد وتركيب وصيانة الرولينج شاتر، نوافذ وأبواب UPVC، نوافذ وأبواب الألومنيوم، وكبائن الاستحمام — توريد وتركيب.",
     },
     {
       question: "هل تقدمون ضمانًا على المنتجات؟",
@@ -63,11 +63,11 @@ export const HOME = {
     },
     {
       question: "هل يمكن طلب معاينة أو عرض سعر؟",
-      answer: "نعم، تواصلوا معنا عبر صفحة تواصل معنا أو واتساب لطلب معاينة وعرض سعر.",
+      answer: "نعم ، تواصلوا معنا من خلال ارقام الهواتف ، الماسنجر او الواتساب لطلب معاينة أو عرض سعر",
     },
     {
       question: "ما الذي يميز برايت شاتر؟",
-      answer: "جودة الخامات، دقة المقاسات، نظافة التركيب، والالتزام في التنفيذ والتسليم.",
+      answer: "جودة الخامات، دقة المقاسات، دقة وجودة التركيب، والالتزام في التنفيذ والتسليم.",
     },
   ],
 };

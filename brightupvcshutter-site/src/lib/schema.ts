@@ -1,4 +1,4 @@
-import { SITE } from "./site";
+import { SITE, SOCIAL_LINKS } from "./site";
 
 type FAQ = { question: string; answer: string };
 
@@ -14,25 +14,26 @@ export function contactPointSchema() {
     "@id": SCHEMA_IDS.contactPoint,
     contactType: "customer service",
     telephone: SITE.phones.map((phone) => phone.tel),
+    url: `${SITE.url}/contact-us/`,
     areaServed: {
       "@type": "Country",
       name: "Egypt",
     },
-    availableLanguage: SITE.language,
+    availableLanguage: [SITE.language, "en"],
   };
 }
 
 export function localBusinessSchema() {
   return {
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": SCHEMA_IDS.localBusiness,
     name: SITE.name,
     alternateName: SITE.legalName,
     description: SITE.description,
     url: SITE.url,
     telephone: SITE.phones.map((phone) => phone.tel),
-    image: `${SITE.url}/images/brand/logo.png`,
-    logo: `${SITE.url}/images/brand/logo.png`,
+    image: `${SITE.url}${SITE.ogImage}`,
+    logo: `${SITE.url}/images/brand/bright-upvc-shutter-logo.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.address.street,
@@ -41,11 +42,18 @@ export function localBusinessSchema() {
       addressCountry: SITE.address.countryCode,
     },
     contactPoint: { "@id": SCHEMA_IDS.contactPoint },
+    sameAs: SOCIAL_LINKS.map((link) => link.href),
     areaServed: {
       "@type": "Country",
       name: "Egypt",
     },
     priceRange: "$$",
+    knowsAbout: [
+      "Rolling shutters",
+      "UPVC windows and doors",
+      "Aluminum windows and doors",
+      "Shower cabins",
+    ],
   };
 }
 
@@ -149,12 +157,13 @@ export function serviceSchema({
     name,
     description,
     url: `${SITE.url}${path}`,
-    image: `${SITE.url}${image}`,
+    image: image.startsWith("http") ? image : `${SITE.url}${image}`,
     provider: { "@id": SCHEMA_IDS.localBusiness },
     areaServed: {
       "@type": "Country",
       name: "Egypt",
     },
+    serviceType: name,
   };
 }
 

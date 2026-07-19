@@ -3,13 +3,13 @@ export const ABOUT = {
     title: "من نحن",
     subtitle:
       "برايت UPVC & شاتر — شركة متخصصة في التوريد والتركيب للشاتر والألومنيوم وUPVC في السوق المصري، بفريق هندسي وفني يقدّم حلولًا متكاملة للمنازل والمنشآت.",
-    image: "/images/home/1.jpeg",
+    image: "/images/home/bright-home-hero-facade.jpeg",
   },
   intro: {
     title: "عن Bright UPVC & Shutter",
     body: "نقدم خدمات متكاملة في التوريد والتركيب للنوافذ والأبواب UPVC والألومنيوم وكبائن الاستحمام والرولينج شاتر التي تساعد الأفراد والمنشآت في تحقيق أفضل سبل الحماية والراحة والأمان. فريق عمل من أمهر المهندسين والفنيين على درجة عالية من الخبرة والكفاءة. تقدم الشركة الضمان المطلوب لكل منتج ضد عيوب الصناعة، وتوفر الصيانة الفورية وخدمة ما بعد البيع لعملائها.",
-    image: "/images/home/6.jpeg",
-    secondaryImage: "/images/home/3.jpeg",
+    image: "/images/home/bright-home-about-section.jpeg",
+    secondaryImage: "/images/home/bright-home-card-upvc-windows.jpeg",
   },
   mission: {
     title: "هدفنا",
@@ -93,13 +93,13 @@ export const ABOUT = {
       "نوافذ وأبواب ألومنيوم مقاومة للصدأ بتصاميم عصرية",
       "كبائن استحمام من الألومنيوم وزجاج السيكوريت أو الأكريليك",
     ],
-    image: "/images/home/2.jpeg",
+    image: "/images/home/bright-home-card-rolling-shutter.jpeg",
   },
   projectsPreview: [
-    { title: "الرولينج شاتر", image: "/images/home/10.jpeg", href: "/shutter/" },
-    { title: "نوافذ وأبواب UPVC", image: "/images/home/11.jpeg", href: "/upvc-windows/" },
-    { title: "كبائن الاستحمام", image: "/images/home/12.jpeg", href: "/shower-cabins/" },
-    { title: "نوافذ وأبواب الألومنيوم", image: "/images/home/13.jpeg", href: "/aluminum-windows-and-doors/" },
+    { title: "الرولينج شاتر", image: "/images/projects/bright-project-rolling-shutter-egypt.png", href: "/shutter/" },
+    { title: "نوافذ وأبواب UPVC", image: "/images/projects/bright-project-upvc-windows-egypt.png", href: "/upvc-windows/" },
+    { title: "كبائن الاستحمام", image: "/images/projects/bright-project-shower-cabin-egypt.png", href: "/shower-cabins/" },
+    { title: "نوافذ وأبواب الألومنيوم", image: "/images/projects/bright-project-aluminum-windows-egypt.png", href: "/aluminum-windows-and-doors/" },
   ],
   faqs: [
     {

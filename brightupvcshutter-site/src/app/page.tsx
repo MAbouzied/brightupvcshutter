@@ -19,7 +19,7 @@ export const metadata = pageMetadata({
   title: META_TITLE,
   description: META_DESCRIPTION,
   path: "/",
-  image: "/images/home/1.jpeg",
+  image: SITE.ogImage,
 });
 
 export default function HomePage() {
@@ -77,7 +77,7 @@ export default function HomePage() {
                 تواصل معنا
               </Link>
               <Link href="/our-projects/" className="hero__btn hero__btn--secondary">
-                أعمالنا
+                مشاريعنا
               </Link>
             </div>
 

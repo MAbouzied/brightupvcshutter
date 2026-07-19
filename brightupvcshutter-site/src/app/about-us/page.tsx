@@ -19,7 +19,7 @@ export const metadata = pageMetadata({
   title: "من نحن",
   description: META_DESCRIPTION,
   path: "/about-us/",
-  image: ABOUT.intro.image,
+  image: SITE.ogImage,
 });
 
 export default function AboutPage() {
@@ -72,7 +72,7 @@ export default function AboutPage() {
               اطلب عرض سعر
             </Link>
             <Link
-              href="/our-services/"
+              href="/"
               className="rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               استعرض خدماتنا
@@ -213,7 +213,7 @@ export default function AboutPage() {
       <section className="section-pad mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">نماذج من أعمالنا</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">نماذج من مشاريعنا</h2>
             <p className="mt-2 text-sm text-slate-600">مشاريع توريد وتركيب في مختلف فئات الخدمات</p>
           </div>
           <Link

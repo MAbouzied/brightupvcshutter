@@ -8,25 +8,25 @@ export type ProjectItem = {
 export const PROJECTS: ProjectItem[] = [
   {
     title: "الرولينج شاتر",
-    image: "/images/home/10.jpeg",
+    image: "/images/projects/bright-project-rolling-shutter-egypt.png",
     href: "/shutter/",
     alt: "مشروع تركيب رولينج شاتر — برايت شاتر",
   },
   {
     title: "نوافذ وأبواب UPVC",
-    image: "/images/home/11.jpeg",
+    image: "/images/projects/bright-project-upvc-windows-egypt.png",
     href: "/upvc-windows/",
     alt: "مشروع نوافذ وأبواب UPVC — برايت شاتر",
   },
   {
     title: "نوافذ وأبواب الألومنيوم",
-    image: "/images/home/13.jpeg",
+    image: "/images/projects/bright-project-aluminum-windows-egypt.png",
     href: "/aluminum-windows-and-doors/",
     alt: "مشروع نوافذ وأبواب ألومنيوم — برايت شاتر",
   },
   {
     title: "كبائن الاستحمام",
-    image: "/images/home/12.jpeg",
+    image: "/images/projects/bright-project-shower-cabin-egypt.png",
     href: "/shower-cabins/",
     alt: "مشروع كبائن استحمام — برايت شاتر",
   },

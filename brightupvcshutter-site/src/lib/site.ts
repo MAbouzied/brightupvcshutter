@@ -3,7 +3,7 @@ export const SITE = {
   legalName: "Bright UPVC & Shutter",
   tagline: "لأعمال الشاتر والألمنيوم",
   description:
-    "نقدم خدمات متكاملة في التوريد والتركيب للرولنج شاتر، نوافذ وأبواب UPVC والألومنيوم، شيش الحصيرة، الدرابزين وكبائن الاستحمام في مصر.",
+    "نقدم خدمات متكاملة في التوريد والتركيب للرولنج شاتر، نوافذ وأبواب UPVC والألومنيوم، وكبائن الاستحمام جميع محافظات جمهوريه مصر العربية.",
   url: "https://brightupvcshutter.com",
   locale: "ar_EG",
   language: "ar",
@@ -24,6 +24,7 @@ export const SITE = {
     display: "أبراج سما - طريق دائري المعادي - القاهرة",
   },
   mapQuery: "أبراج سما طريق المعادي الدائري القاهرة مصر",
+  ogImage: "/images/brand/bright-upvc-shutter-logo.png",
   colors: {
     primary: "#1E2F97",
     secondary: "#3B8CF8",
@@ -38,8 +39,7 @@ export type NavItem = {
 
 export const MAIN_NAV: NavItem[] = [
   { label: "الرئيسية", href: "/" },
-  { label: "خدماتنا", href: "/our-services/" },
-  { label: "أعمالنا", href: "/our-projects/" },
+  { label: "مشاريعنا", href: "/our-projects/" },
   { label: "من نحن", href: "/about-us/" },
   { label: "تواصل معنا", href: "/contact-us/" },
 ];
@@ -49,4 +49,22 @@ export const FOOTER_SERVICES = [
   { label: "نوافذ وأبواب UPVC", href: "/upvc-windows/" },
   { label: "نوافذ وأبواب الألومنيوم", href: "/aluminum-windows-and-doors/" },
   { label: "كبائن الاستحمام", href: "/shower-cabins/" },
+] as const;
+
+export const SOCIAL_LINKS = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/bright.upvc.shutter",
+    icon: "https://cdn.simpleicons.org/facebook/1877F2",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/bright_upvc_shutter/",
+    icon: "https://cdn.simpleicons.org/instagram/E4405F",
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@bright.upvc.shutter",
+    icon: "https://cdn.simpleicons.org/tiktok/000000",
+  },
 ] as const;

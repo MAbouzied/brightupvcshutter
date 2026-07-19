@@ -14,7 +14,7 @@ export function Header() {
 
         <Link href="/" className="flex shrink-0 items-center gap-3" aria-label={SITE.name}>
           <Image
-            src="/images/brand/logo.png"
+            src="/images/brand/bright-upvc-shutter-logo.png"
             alt={SITE.name}
             width={160}
             height={45}

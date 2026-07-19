@@ -4,7 +4,7 @@ import { SERVICES } from "@/content/services";
 
 export const dynamic = "force-static";
 
-const STATIC_PATHS = ["/", "/about-us/", "/our-services/", "/our-projects/", "/contact-us/"];
+const STATIC_PATHS = ["/", "/about-us/", "/our-projects/", "/contact-us/"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const servicePaths = SERVICES.map((s) => s.href);
@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:
       path === "/"
         ? 1
-        : path === "/our-services/" || servicePaths.includes(path)
+        : servicePaths.includes(path)
           ? 0.9
           : 0.7,
   }));

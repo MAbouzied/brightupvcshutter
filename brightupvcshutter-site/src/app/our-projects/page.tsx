@@ -7,13 +7,14 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { PageHero } from "@/components/sections/PageHero";
 import { breadcrumbSchema, faqSchema, imageObjectSchema, webPageSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { SITE } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "مشاريعنا",
   description:
     "معرض مشاريع برايت شاتر — الرولينج شاتر، نوافذ وأبواب UPVC، نوافذ وأبواب الألومنيوم، وكبائن الاستحمام.",
   path: "/our-projects/",
-  image: "/images/home/10.jpeg",
+  image: SITE.ogImage,
 });
 
 export default function ProjectsPage() {
