@@ -2,7 +2,7 @@ export const HOME = {
   hero: {
     eyebrow: "Bright UPVC & Shutter",
     title: "جودة تنفيذ تتجاوز التوقعات",
-    lead: "حلول متكاملة للرولينج شاتر، نوافذ وأبواب UPVC والألومنيوم، وكبائن الاستحمام",
+    lead: "لأعمال الشاتر والـ UPVC والألومنيوم — حلول متكاملة للرولينج شاتر، نوافذ وأبواب UPVC والألومنيوم، وكبائن الاستحمام",
     description:
       "تصميمات عصرية وجودة تنفيذ عالية — نحوّل احتياجاتك إلى مساحات آمنة وأنيقة مع فريق هندسي وفني متخصص في مصر.",
     image: "/images/home/bright-home-hero-facade.jpeg",
@@ -16,7 +16,7 @@ export const HOME = {
     image: "/images/home/bright-home-about-section.jpeg",
   },
   whyHighlights: {
-    title: "لماذا برايت شتر؟",
+    title: "لماذا برايت شاتر؟",
     items: [
       {
         title: "أفضل خدمة بطرق احترافية",
@@ -59,7 +59,7 @@ export const HOME = {
     },
     {
       question: "في أي مناطق تقدمون خدماتكم؟",
-      answer: "نخدم عملاءنا في مصر.",
+      answer: "نخدم عملاءنا في جميع محافظات جمهوريه مصر العربية.",
     },
     {
       question: "هل يمكن طلب معاينة أو عرض سعر؟",
